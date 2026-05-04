@@ -1,0 +1,60 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #fefaf5; color: #2e2e2e; scroll-behavior: smooth; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 80px 0; }
+.section-title { text-align: center; margin-bottom: 20px; font-family: 'Playfair Display', serif; font-size: 36px; }
+.section-sub { text-align: center; color: #777; margin-bottom: 40px; }
+
+/* HEADER */
+header { background: #fff; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; letter-spacing: 2px; }
+.logo span { color: #c6a15b; }
+nav a { text-decoration: none; color: #4a4a4a; font-weight: 600; margin-left: 25px; text-transform: uppercase; font-size: 13px; }
+
+/* HERO (Rasm o'lchami) */
+.hero { 
+    height: 85vh; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    color: white;
+}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 52px; margin: 15px 0; }
+.divider { width: 70px; height: 3px; background: #c6a15b; margin: 20px auto; }
+
+/* BOOKING BAR */
+.booking-bar { 
+    background: rgba(255,255,255,0.95); padding: 25px; border-radius: 20px; 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; 
+    margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); color: #333; 
+}
+.input-group { display: flex; flex-direction: column; text-align: left; }
+.input-group label { font-size: 11px; text-transform: uppercase; color: #777; margin-bottom: 5px; font-weight: 600; }
+.input-group input { padding: 12px; border: 1px solid #e0d6cc; border-radius: 12px; height: 48px; }
+
+/* DROPDOWN */
+.guests-dropdown { position: relative; }
+.guests-input { padding: 12px; border: 1px solid #e0d6cc; border-radius: 12px; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; height: 48px; }
+.dropdown-content { display: none; position: absolute; top: 110%; left: 0; width: 280px; background: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); padding: 20px; z-index: 100; }
+.dropdown-content.active { display: block; }
+.counter-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: #333; }
+.counter-controls { display: flex; align-items: center; gap: 10px; border: 1px solid #ddd; padding: 5px 10px; border-radius: 8px; }
+.counter-controls button { background: none; border: none; font-size: 20px; color: #c6a15b; cursor: pointer; font-weight: bold; }
+
+/* GRIDLAR */
+.rooms-grid, .services-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.room-card, .service-item { background: #fff; border-radius: 20px; overflow: hidden; width: 350px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.room-card img, .service-item img { width: 100%; height: 230px; object-fit: cover; }
+.room-info, .service-info { padding: 20px; text-align: center; }
+.price { color: #c6a15b; font-size: 22px; font-weight: bold; margin: 10px 0; }
+
+/* TUGMALAR */
+.btn-gold-main { background: #c6a15b; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; height: 48px; width: 100%; }
+.btn-outline { border: 1px solid #c6a15b; color: #c6a15b; padding: 8px 20px; border-radius: 30px; text-decoration: none; display: inline-block; margin-top: 10px; }
+
+/* MAP */
+.map-container { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); height: 450px; }
+iframe { width: 100%; height: 100%; border: none; }
+
+footer { background: #1e1e1e; color: #888; padding: 30px 0; text-align: center; }

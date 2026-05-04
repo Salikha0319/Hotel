@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hotel - Toshkent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mustaqil.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo"><span>HOTEL</span> </div>
+        <nav>
+            <a href="#home">Asosiy</a>
+            <a href="#rooms">Xonalar</a>
+            <a href="#services">Xizmatlar</a>
+            <a href="#map">Aloqa</a>
+        </nav>
+        <div class="phone">📞 +998 78 150-10-90</div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/1.jpg') center/cover no-repeat;">
+        
+        <div class="container hero-content">
+            <p class="subtitle">Xush kelibsiz</p>
+            <h1>Toshkent markazidagi<br>shinam mehmonxona</h1>
+            <div class="divider"></div>
+            
+            
+            <div class="booking-bar">
+                <div class="input-group">
+                    <label>Kelish sanasi</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Ketish sanasi</label>
+                    <input type="date">
+                </div>
+                
+                <div class="input-group">
+                    <label>Mehmonlar</label>
+                    <div class="guests-dropdown">
+                        <div class="guests-input" onclick="toggleDropdown()">
+                            <span id="guest-count-display">1 yoshi katta, 0 bola</span>
+                            <span>👤</span>
+                        </div>
+                        
+                        <div class="dropdown-content" id="guestsMenu">
+                            <div class="counter-row">
+                                <span>Kattalar</span>
+                                <div class="counter-controls">
+                                    <button type="button" onclick="changeValue('adults', -1)">−</button>
+                                    <span id="adults-count">1</span>
+                                    <button type="button" onclick="changeValue('adults', 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="counter-row">
+                                <span>Bolalar</span>
+                                <div class="counter-controls">
+                                    <button type="button" onclick="changeValue('children', -1)">−</button>
+                                    <span id="children-count">0</span>
+                                    <button type="button" onclick="changeValue('children', 1)">+</button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-gold-main" style="width:100%; margin-top:10px;" onclick="toggleDropdown()">Tayyor</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-gold-main">XONANI TOPISH</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- XONALAR (3 TA) -->
+    <section id="rooms" class="section">
+        <div class="container">
+            <h2 class="section-title">Bizning xonalar</h2>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400" alt="Standard">
+                    <div class="room-info">
+                        <h3>Standart</h3>
+                        <div class="price">$80 / kecha</div>
+                        <a href="#" class="btn-outline">Batafsil</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400" alt="Semi-lux">
+                    <div class="room-info">
+                        <h3>Polulyuks</h3>
+                        <div class="price">$130 / kecha</div>
+                        <a href="#" class="btn-outline">Batafsil</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400" alt="Lux">
+                    <div class="room-info">
+                        <h3>Lyuks</h3>
+                        <div class="price">$220 / kecha</div>
+                        <a href="#" class="btn-outline">Batafsil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- XIZMATLAR -->
+    <section id="services" class="section" style="background: #f7f2ea;">
+        <div class="container">
+            <h2 class="section-title">Xizmatlarimiz</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400" alt="Restoran">
+                    <div class="service-info">
+                        <h3>Restoran</h3>
+                        <p>Milliy va Yevropa taomlari</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400" alt="Fitnes">
+                    <div class="service-info">
+                        <h3>Fitnes Zal</h3>
+                        <p>Zamonaviy trenajyorlar</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400" alt="WiFi">
+                    <div class="service-info">
+                        <h3>Bepul Wi-Fi</h3>
+                        <p>Tezkor internet xizmati</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOKATSIYA (MAP) -->
+    <section id="map" class="section">
+        <div class="container">
+            <h2 class="section-title">Manzilimiz</h2>
+            <p class="section-sub">Toshkent shahar 1A</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.941235122485!2d69.25585527658763!3d41.288417902120355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8aeb990f3c6d%3A0x6b864197e41b9d10!2sNavruz%20Hotel!5e0!3m2!1suz!2s!4v1714460000000!5m2!1suz!2s" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Navruz Hotel — Toshkentdagi uyingiz</p>
+    </div>
+</footer>
+
+<script>
+    let counts = { adults: 1, children: 0 };
+    function toggleDropdown() {
+        document.getElementById('guestsMenu').classList.toggle('active');
+    }
+    function changeValue(type, delta) {
+        counts[type] += delta;
+        if (counts.adults < 1) counts.adults = 1;
+        if (counts.children < 0) counts.children = 0;
+        document.getElementById(type + '-count').innerText = counts[type];
+        document.getElementById('guest-count-display').innerText = `${counts.adults} yoshi katta, ${counts.children} bola`;
+    }
+</script>
+
+</body>
+</html>
